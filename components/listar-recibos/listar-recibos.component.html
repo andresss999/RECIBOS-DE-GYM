@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo">LISTAR RECIBOS</h5>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let recibos of listrecibos ">
+                    <td> {{ recibos.usuario}} </td>
+                    <td> {{ recibos.numeroderecibo}} </td>
+                    <td> {{ recibos.fechaExpiracion}} </td>
+                    <td>
+                      <i class="fa-solid fa-pen-to-square text-info"></i>
+                      <i (click)="eliminarrecibo(recibos.id)" class="fa-solid fa-trash-can text-danger"></i>
+
+                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
